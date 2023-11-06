@@ -13,8 +13,8 @@ public class Triqui {
      */
     public static void main(String[] args) {
         int juego = 1, mov = 1, pos, op, c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0, c7 = 0, c8 = 0, c9 = 0;
-        String O, X;
         Scanner leer = new Scanner(System.in);
+        String j1, j2;
         System.out.println("Quiere jugar una partida de triqui \n(1) SI\n(2)NO");
         op = leer.nextInt();
         while (op < 1 || op > 2) {
@@ -24,13 +24,20 @@ public class Triqui {
         do {
             switch (op) {
                 case 1:
-                    while (juego == 1) {
-                        System.out.println("  |   | ");
+                    System.out.println("Bienvenido a Triqui");
+                    System.out.println("Para jugar solo escriba la posicion con la siguiente tabla, siempre empieza el circulo");
+                    System.out.println("1 | 2 | 3");
+                    System.out.println("---------");
+                    System.out.println("4 | 5 | 6");
+                    System.out.println("---------");
+                    System.out.println("7 | 8 | 9");
+                    while (juego == 1 && mov <= 9) {
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
                         System.out.println("---------");
-                        System.out.println("  |   | ");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
                         System.out.println("---------");
-                        System.out.println("  |   | ");
-                        if (mov%2 ==1) {
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                        if (mov % 2 == 1) {
                             System.out.println("Turno del O");
                         } else {
                             System.out.println("Turno de la X");
@@ -43,34 +50,20 @@ public class Triqui {
                             case 1:
                                 if (c1 == 0) {
                                     if (mov % 2 == 1) {
-                                        System.out.println(" O |  |  ");
-                                        System.out.println("---------");
-                                        System.out.println("  |  |  ");
-                                        System.out.println("---------");
-                                        System.out.println("  |   | ");
+                                        c1 = 1;
+                                        j1 = "O";
                                     } else {
-                                        System.out.println(" X |   | ");
-                                        System.out.println("---------");
-                                        System.out.println("  |   | ");
-                                        System.out.println("---------");
-                                        System.out.println("  |   | ");
+                                        c1 = 2;
+                                        j2 = "X";
                                     }
                                 }
                                 break;
                             case 2:
                                 if (c2 == 0) {
                                     if (mov % 2 == 1) {
-                                        System.out.println("  |  |  ");
-                                        System.out.println("---------");
-                                        System.out.println("  |  |  ");
-                                        System.out.println("---------");
-                                        System.out.println("  |  |  ");
+                                        c2 = 1;
                                     } else {
-                                        System.out.println("  |   | ");
-                                        System.out.println("---------");
-                                        System.out.println("  |   | ");
-                                        System.out.println("---------");
-                                        System.out.println("  |   | ");
+                                        c2 = 2;
                                     }
                                 }
                                 break;
@@ -139,14 +132,16 @@ public class Triqui {
                                 break;
 
                         }
+                        while (c1!=0||c2!=0||c3!=0||c4!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0) {                            
+                            
+                        }
+                            
+                        }
                         mov = mov + 1;
                     }
-
                     break;
                 case 2:
-
                     break;
-
             }
         } while (op != 2);
     }
