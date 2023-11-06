@@ -21,129 +21,293 @@ public class Triqui {
             System.out.println("Quiere jugar una partida de triqui (1) SI\n(2)NO");
             op = leer.nextInt();
         }
-        do {
-            switch (op) {
-                case 1:
-                    System.out.println("Bienvenido a Triqui");
-                    System.out.println("Para jugar solo escriba la posicion con la siguiente tabla, siempre empieza el circulo");
-                    System.out.println("1 | 2 | 3");
-                    System.out.println("---------");
-                    System.out.println("4 | 5 | 6");
-                    System.out.println("---------");
-                    System.out.println("7 | 8 | 9");
-                    while (juego == 1 && mov <= 9) {
+        if (op == 1) {
+            System.out.println("POSICIONES.");
+            System.out.println("1 | 2 | 3");
+            System.out.println("---------");
+            System.out.println("4 | 5 | 6");
+            System.out.println("---------");
+            System.out.println("7 | 8 | 9 \n");
+        }
+        while (op == 1) {
+            do {
+                if (mov % 2 == 1) {
+                    System.out.println("Turno del jugador 1:");
+                    pos = leer.nextInt();
+                    while (pos < 1 || pos > 9) {
+                        System.out.println("Casilla invalida:");
+                        pos = leer.nextInt();
+                    }
+                    while ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
+                        System.out.println("Casilla ocupada: ");
+                        pos = leer.nextInt();
+                        while (pos < 1 || pos > 9) {
+                            System.out.println("Casilla invalida:");
+                            pos = leer.nextInt();
+                        }
+                    }
+                    if (pos == 1 && c1 == 0) {
+                        c1 = 1;
                         System.out.println(c1 + " | " + c2 + " | " + c3);
                         System.out.println("---------");
                         System.out.println(c4 + " | " + c5 + " | " + c6);
                         System.out.println("---------");
                         System.out.println(c7 + " | " + c8 + " | " + c9);
-                        if (mov % 2 == 1) {
-                            System.out.println("Turno del O");
-                        } else {
-                            System.out.println("Turno de la X");
-                        }
+                    }
+                    if (pos == 2 && c2 == 0) {
+                        c2 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 3 && c3 == 0) {
+                        c3 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 4 && c4 == 0) {
+                        c4 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 5 && c5 == 0) {
+                        c5 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 6 && c6 == 0) {
+                        c6 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 7 && c7 == 0) {
+                        c7 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 8 && c8 == 0) {
+                        c8 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 9 && c9 == 0) {
+                        c9 = 1;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                } else {
+                    System.out.println("Turno del jugador 2:");
+                    pos = leer.nextInt();
+                    while (pos < 1 || pos > 9) {
+                        System.out.println("Casilla invalida:");
+                        pos = leer.nextInt();
+                    }
+                    while ((pos == 1 && c1 != 0) || (pos == 2 && c2 != 0) || (pos == 3 && c3 != 0) || (pos == 4 && c4 != 0) || (pos == 5 && c5 != 0) || (pos == 6 && c6 != 0)
+                            || (pos == 7 && c7 != 0) || (pos == 8 && c8 != 0) || (pos == 9 && c9 != 0)) {
+                        System.out.println("Casilla ocupada: ");
                         pos = leer.nextInt();
                         while (pos < 1 || pos > 9) {
+                            System.out.println("Casilla invalida:");
                             pos = leer.nextInt();
                         }
-                        switch (pos) {
-                            case 1:
-                                if (c1 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c1 = 1;
-                                        j1 = "O";
-                                    } else {
-                                        c1 = 2;
-                                        j2 = "X";
-                                    }
-                                }
-                                break;
-                            case 2:
-                                if (c2 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c2 = 1;
-                                    } else {
-                                        c2 = 2;
-                                    }
-                                }
-                                break;
-                            case 3:
-                                if (c3 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c3 = 1;
-                                    } else {
-                                        c3 = 2;
-                                    }
-                                }
-                                break;
-                            case 4:
-                                if (c4 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c4 = 1;
-                                    } else {
-                                        c4 = 2;
-                                    }
-                                }
-                                break;
-                            case 5:
-                                if (c5 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c5 = 1;
-                                    } else {
-                                        c5 = 2;
-                                    }
-                                }
-                                break;
-                            case 6:
-                                if (c6 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c6 = 1;
-                                    } else {
-                                        c6 = 2;
-                                    }
-                                }
-                                break;
-                            case 7:
-                                if (c7 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c7 = 1;
-                                    } else {
-                                        c7 = 2;
-                                    }
-                                }
-                                break;
-                            case 8:
-                                if (c8 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c8 = 1;
-                                    } else {
-                                        c8 = 2;
-                                    }
-                                }
-                                break;
-                            case 9:
-                                if (c9 == 0) {
-                                    if (mov % 2 == 1) {
-                                        c9 = 1;
-                                    } else {
-                                        c9 = 2;
-                                    }
-                                }
-                                break;
-
-                        }
-                        while (c1!=0||c2!=0||c3!=0||c4!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0||c1!=0) {                            
-                            
-                        }
-                            
-                        }
-                        mov = mov + 1;
                     }
-                    break;
-                case 2:
-                    break;
-            }
-        } while (op != 2);
+                    if (pos == 1 && c1 == 0) {
+                        c1 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 2 && c2 == 0) {
+                        c2 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 3 && c3 == 0) {
+                        c3 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 4 && c4 == 0) {
+                        c4 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 5 && c5 == 0) {
+                        c5 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 6 && c6 == 0) {
+                        c6 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 7 && c7 == 0) {
+                        c7 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 8 && c8 == 0) {
+                        c8 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                    if (pos == 9 && c9 == 0) {
+                        c9 = 2;
+                        System.out.println(c1 + " | " + c2 + " | " + c3);
+                        System.out.println("---------");
+                        System.out.println(c4 + " | " + c5 + " | " + c6);
+                        System.out.println("---------");
+                        System.out.println(c7 + " | " + c8 + " | " + c9);
+                    }
+                }
+                mov = mov + 1;
+                if (mov >= 6) {
+                    if (c1 == 1 && c1 == c2 && c2 == c3) {
+                        System.out.println("¡El JUGADOR 1 HA GANADO!");
+                        mov = 10;
+                    } else {
+                        if (c4 == 1 && c4 == c5 && c5 == c6) {
+                            System.out.println("¡El JUGADOR 1 HA GANADO!");
+                            mov = 10;
+                        } else {
+                            if (c7 == 1 && c7 == c8 && c8 == c9) {
+                                System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                mov = 10;
+                            } else {
+                                if (c1 == 1 && c1 == c4 && c4 == c7) {
+                                    System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                    mov = 10;
+                                } else {
+                                    if (c2 == 1 && c2 == c5 && c5 == c8) {
+                                        System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                        mov = 10;
+                                    } else {
+                                        if (c3 == 1 && c3 == c6 && c6 == c9) {
+                                            System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                            mov = 10;
+                                        } else {
+                                            if (c1 == 1 && c1 == c5 && c5 == c9) {
+                                                System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                                mov = 10;
+                                            } else {
+                                                if (c3 == 1 && c3 == c5 && c5 == c7) {
+                                                    System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                                    mov = 10;
+                                                } else {
+                                                    if (c7 == 1 && c7 == c8 && c8 == c9) {
+                                                        System.out.println("¡El JUGADOR 1 HA GANADO!");
+                                                        mov = 10;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (c1 == 2 && c1 == c2 && c2 == c3) {
+                        System.out.println("¡El JUGADOR 2 HA GANADO!");
+                        mov = 10;
+                    } else {
+                        if (c4 == 2 && c4 == c5 && c5 == c6) {
+                            System.out.println("¡El JUGADOR 2 HA GANADO!");
+                            mov = 10;
+                        } else {
+                            if (c7 == 2 && c7 == c8 && c8 == c9) {
+                                System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                mov = 10;
+                            } else {
+                                if (c1 == 2 && c1 == c4 && c4 == c7) {
+                                    System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                    mov = 10;
+                                } else {
+                                    if (c2 == 2 && c2 == c5 && c5 == c8) {
+                                        System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                        mov = 10;
+                                    } else {
+                                        if (c3 == 2 && c3 == c6 && c6 == c9) {
+                                            System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                            mov = 10;
+                                        } else {
+                                            if (c1 == 2 && c1 == c5 && c5 == c9) {
+                                                System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                                mov = 10;
+                                            } else {
+                                                if (c3 == 2 && c3 == c5 && c5 == c7) {
+                                                    System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                                    mov = 10;
+                                                } else {
+                                                    if (c7 == 2 && c7 == c8 && c8 == c9) {
+                                                        System.out.println("¡El JUGADOR 2 HA GANADO!");
+                                                        mov = 10;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (mov == 9) {
+                        System.out.println("!!EMPATE!!");
+                    }
+                }
+                if (mov > 9) {
+                    System.out.println("\nDesea jugar de nuevo?");
+                    op = leer.nextInt();
+                }
+            } while (mov < 9);
+        }
     }
 
 }
