@@ -248,6 +248,8 @@ public class Triqui {
                                                 if (c7 == 'o' && c7 == c8 && c8 == c9) {
                                                     System.out.println("¡El JUGADOR 1 HA GANADO!");
                                                     mov = 10;
+                                                } else {
+                                                    System.out.println("Empate");
                                                 }
                                             }
                                         }
@@ -292,6 +294,8 @@ public class Triqui {
                                                 if (c7 == 'x' && c7 == c8 && c8 == c9) {
                                                     System.out.println("¡El JUGADOR 2 HA GANADO!");
                                                     mov = 11;
+                                                } else {
+                                                    System.out.println("Empate");
                                                 }
                                             }
                                         }
@@ -301,13 +305,10 @@ public class Triqui {
                         }
                     }
                 }
-
                 if (mov > 9) {
                     op = 2;
                 }
-
             } while (mov < 9);
         }
     }
-
 }
