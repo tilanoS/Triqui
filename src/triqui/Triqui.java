@@ -213,14 +213,14 @@ public class Triqui {
                 if((c1 == 'o' && c1 == c2 && c2 == c3)||(c4 == 'o' && c4 == c5 && c5 == c6)||(c7 == 'o' && c7 == c8 && c8 == c9)||(c1 == 'o' && c1 == c4 && c4 == c7)||(c2 == 'o' && c2 == c5 && c5 == c8)||(c3 == 'o' && c3 == c6 && c6 == c9)
                         ||(c1 =='o' && c1 == c5 && c5 == c9)||(c3 == 'o' && c3 == c5 && c5 == c7)||(c7 == 'o' && c7 == c8 && c8 == c9)){
                     System.out.println("!EL JUGADOR 1 HA GANADO!");
-                    mov=15;
+                    mov=11;
                 }
                 if((c1 == 'x' && c1 == c2 && c2 == c3)||(c4 == 'x' && c4 == c5 && c5 == c6)||(c7 =='x' && c7 == c8 && c8 == c9)||(c1 == 'x' && c1 == c4 && c4 == c7)||(c2 == 'x' && c2 == c5 && c5 == c8)||(c3 == 'x' && c3 == c6 && c6 == c9)
                         ||(c1 == 'x' && c1 == c5 && c5 == c9)||(c3 == 'x' && c3 == c5 && c5 == c7)||(c7 == 'x' && c7 == c8 && c8 == c9)){
                     System.out.println("!EL JUGADOR 2 HA GANADO!");
-                    mov=15;
+                    mov=11;
                 }
-                if(mov!=15 && mov>=10){
+                if(mov!=11 && mov>=10){
                     System.out.println("!!EMPATE!!");
                 }
                 if (mov > 9) {
