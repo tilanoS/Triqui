@@ -209,43 +209,44 @@ public class Triqui {
                     }
                 }
                 mov = mov + 1;
-                if (mov >= 6) {
-                    if (c1 == 1 && c1 == c2 && c2 == c3) {
+                if(mov==10){
+                    System.out.println("!!EMPATE!!");
+                }
+                if (c1 == 1 && c1 == c2 && c2 == c3) {
+                    System.out.println("¡El JUGADOR 1 HA GANADO!");
+                    mov = 10;
+                } else {
+                    if (c4 == 1 && c4 == c5 && c5 == c6) {
                         System.out.println("¡El JUGADOR 1 HA GANADO!");
                         mov = 10;
                     } else {
-                        if (c4 == 1 && c4 == c5 && c5 == c6) {
+                        if (c7 == 1 && c7 == c8 && c8 == c9) {
                             System.out.println("¡El JUGADOR 1 HA GANADO!");
                             mov = 10;
                         } else {
-                            if (c7 == 1 && c7 == c8 && c8 == c9) {
+                            if (c1 == 1 && c1 == c4 && c4 == c7) {
                                 System.out.println("¡El JUGADOR 1 HA GANADO!");
                                 mov = 10;
                             } else {
-                                if (c1 == 1 && c1 == c4 && c4 == c7) {
+                                if (c2 == 1 && c2 == c5 && c5 == c8) {
                                     System.out.println("¡El JUGADOR 1 HA GANADO!");
                                     mov = 10;
                                 } else {
-                                    if (c2 == 1 && c2 == c5 && c5 == c8) {
+                                    if (c3 == 1 && c3 == c6 && c6 == c9) {
                                         System.out.println("¡El JUGADOR 1 HA GANADO!");
                                         mov = 10;
                                     } else {
-                                        if (c3 == 1 && c3 == c6 && c6 == c9) {
+                                        if (c1 == 1 && c1 == c5 && c5 == c9) {
                                             System.out.println("¡El JUGADOR 1 HA GANADO!");
                                             mov = 10;
                                         } else {
-                                            if (c1 == 1 && c1 == c5 && c5 == c9) {
+                                            if (c3 == 1 && c3 == c5 && c5 == c7) {
                                                 System.out.println("¡El JUGADOR 1 HA GANADO!");
                                                 mov = 10;
                                             } else {
-                                                if (c3 == 1 && c3 == c5 && c5 == c7) {
+                                                if (c7 == 1 && c7 == c8 && c8 == c9) {
                                                     System.out.println("¡El JUGADOR 1 HA GANADO!");
                                                     mov = 10;
-                                                } else {
-                                                    if (c7 == 1 && c7 == c8 && c8 == c9) {
-                                                        System.out.println("¡El JUGADOR 1 HA GANADO!");
-                                                        mov = 10;
-                                                    }
                                                 }
                                             }
                                         }
@@ -254,42 +255,42 @@ public class Triqui {
                             }
                         }
                     }
-                    if (c1 == 2 && c1 == c2 && c2 == c3) {
+                }
+                if (c1 == 2 && c1 == c2 && c2 == c3) {
+                    System.out.println("¡El JUGADOR 2 HA GANADO!");
+                    mov = 11;
+                } else {
+                    if (c4 == 2 && c4 == c5 && c5 == c6) {
                         System.out.println("¡El JUGADOR 2 HA GANADO!");
-                        mov = 10;
+                        mov = 11;
                     } else {
-                        if (c4 == 2 && c4 == c5 && c5 == c6) {
+                        if (c7 == 2 && c7 == c8 && c8 == c9) {
                             System.out.println("¡El JUGADOR 2 HA GANADO!");
-                            mov = 10;
+                            mov = 11;
                         } else {
-                            if (c7 == 2 && c7 == c8 && c8 == c9) {
+                            if (c1 == 2 && c1 == c4 && c4 == c7) {
                                 System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                mov = 10;
+                                mov = 11;
                             } else {
-                                if (c1 == 2 && c1 == c4 && c4 == c7) {
+                                if (c2 == 2 && c2 == c5 && c5 == c8) {
                                     System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                    mov = 10;
+                                    mov = 11;
                                 } else {
-                                    if (c2 == 2 && c2 == c5 && c5 == c8) {
+                                    if (c3 == 2 && c3 == c6 && c6 == c9) {
                                         System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                        mov = 10;
+                                        mov = 11;
                                     } else {
-                                        if (c3 == 2 && c3 == c6 && c6 == c9) {
+                                        if (c1 == 2 && c1 == c5 && c5 == c9) {
                                             System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                            mov = 10;
+                                            mov = 11;
                                         } else {
-                                            if (c1 == 2 && c1 == c5 && c5 == c9) {
+                                            if (c3 == 2 && c3 == c5 && c5 == c7) {
                                                 System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                                mov = 10;
+                                                mov = 11;
                                             } else {
-                                                if (c3 == 2 && c3 == c5 && c5 == c7) {
+                                                if (c7 == 2 && c7 == c8 && c8 == c9) {
                                                     System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                                    mov = 10;
-                                                } else {
-                                                    if (c7 == 2 && c7 == c8 && c8 == c9) {
-                                                        System.out.println("¡El JUGADOR 2 HA GANADO!");
-                                                        mov = 10;
-                                                    }
+                                                    mov = 11;
                                                 }
                                             }
                                         }
@@ -298,14 +299,12 @@ public class Triqui {
                             }
                         }
                     }
-                    if (mov == 9) {
-                        System.out.println("!!EMPATE!!");
-                    }
                 }
+
                 if (mov > 9) {
-                    System.out.println("\nDesea jugar de nuevo?");
-                    op = leer.nextInt();
+                    op = 2;
                 }
+
             } while (mov < 9);
         }
     }
